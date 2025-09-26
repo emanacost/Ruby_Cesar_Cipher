@@ -38,4 +38,5 @@ def small_shifter(letter, shift)
     else
         shifted_ascii_letter = letter.ord + shift
     end
+    return shifted_ascii_letter
 end
