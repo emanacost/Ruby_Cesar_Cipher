@@ -15,7 +15,6 @@
 
 # Method to shift capital letters
 def cap_shifter(letter, shift)
-    ascii_letter = letter.ord
     # Check whether shift will require wrap
     if letter.ord - 90 > shift
         # Wrap the shift back through "A"
@@ -29,7 +28,6 @@ end
 
 # Method to shift small letters
 def small_shifter(letter, shift)
-    ascii_letter = letter.ord
     # Check whether shift will require wrap
     if letter.ord - 122 > shift
         # Wrap the shift back through "a"
