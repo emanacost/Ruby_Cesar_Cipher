@@ -26,10 +26,10 @@ def cesar_cipher(string, shift)
     string_split = string.split("")
     shifted_letters = []
     string_split.each do |letter|
-      if letter == letter.upcase && letter.match(/[A-Z]/)
+      if letter.match(/[A-Z]/)
         shifted_ascii = cap_shifter(letter, shift)
         shifted_letters << shifted_ascii.chr
-      elsif letter == letter.downcase && letter.match(/[a-z]/)
+      elsif letter.match(/[a-z]/)
         shifted_ascii = small_shifter(letter, shift)
         shifted_letters << shifted_ascii.chr
       else
