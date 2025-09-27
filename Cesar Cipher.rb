@@ -23,7 +23,18 @@ end
 
 def cesar_cipher(string, shift)
     # Split unshift_string into an array of individual letters
-    unshift_string_split = unshift_string.split("")  
+    string_split = string.split("")
+    string_split.each do |letter|
+      if letter == letter.upcase
+        shifted_string_split = cap_shifter(letter, shift)
+      elsif letter == letter.downcase
+        shifted_string_split = small_shifter(letter, shift)
+      else
+        next
+      end
+    end
+    shifted_string = shifted_string_split.join("")
+    shifted_string
 end
 
 # Method to shift capital letters
