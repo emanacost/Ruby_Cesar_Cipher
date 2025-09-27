@@ -24,16 +24,19 @@ end
 def cesar_cipher(string, shift)
     # Split unshift_string into an array of individual letters
     string_split = string.split("")
+    shifted_letters = []
     string_split.each do |letter|
-      if letter == letter.upcase
-        shifted_string_split = cap_shifter(letter, shift)
-      elsif letter == letter.downcase
-        shifted_string_split = small_shifter(letter, shift)
+      if letter == letter.upcase && letter.match(/[A-Z]/)
+        shifted_ascii = cap_shifter(letter, shift)
+        shifted_letters << shifted_ascii.chr
+      elsif letter == letter.downcase && letter.match(/[a-z]/)
+        shifted_ascii = small_shifter(letter, shift)
+        shifted_letters << shifted_ascii.chr
       else
-        next
+        shifted_letters << letter
       end
     end
-    shifted_string = shifted_string_split.join("")
+    shifted_string = shifted_letters.join("")
     shifted_string
 end
 
