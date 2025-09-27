@@ -65,3 +65,5 @@ def small_shifter(letter, shift)
     end
     return shifted_ascii_letter
 end
+
+puts "The encrypted message: #{cesar_cipher(unshift_string, shift_key)}"
