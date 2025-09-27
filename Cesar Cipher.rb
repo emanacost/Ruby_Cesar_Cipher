@@ -21,6 +21,8 @@ else
     abort('Error! Please input as follows: Cesar Cipher.rb "Message" 2')
 end
 
+# Split unshift_string into an array of individual letters
+unshift_string_split = unshift_string.split("")
 
 # Method to shift capital letters
 def cap_shifter(letter, shift)
