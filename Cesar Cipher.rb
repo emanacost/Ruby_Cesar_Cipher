@@ -45,8 +45,7 @@ def cap_shifter(letter, shift)
     # Check whether shift will require wrap
     if 90 - letter.ord < shift
         # Wrap the shift back through "A"
-        wrapped_shift = shift - (90 - letter.ord)
-        shifted_ascii_letter = 64 + wrapped_shift
+        shifted_ascii_letter = shift - (90 - letter.ord) + 64
     else
         shifted_ascii_letter = letter.ord + shift
     end
@@ -58,8 +57,7 @@ def small_shifter(letter, shift)
     # Check whether shift will require wrap
     if 122 - letter.ord < shift
         # Wrap the shift back through "a"
-        wrapped_shift = shift - (122 - letter.ord)
-        shifted_ascii_letter = 96 + wrapped_shift        
+        shifted_ascii_letter = 96 + shift - (122 - letter.ord)        
     else
         shifted_ascii_letter = letter.ord + shift
     end
